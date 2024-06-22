@@ -39,7 +39,7 @@ function factorial(num) {
   return factorSum;
 }
 let num = 5;
-console.log(`A(z) ${num} faktoriálisa: ${factorial(num)}`);
+//console.log(`A(z) ${num} faktoriálisa: ${factorial(num)}`);
 
 // 2. Feladat - FizzBuzz
 
@@ -68,7 +68,7 @@ function fizzbuzz(n) {
   }
 }
 
-fizzbuzz(20);
+//fizzbuzz(20);
 
 // 3. Feladat - Unicum, csak pozitívan!
 
@@ -86,8 +86,8 @@ function getPositives(arr) {
   }
   return arrPositive;
 }
-const arr = [1, 10, -3, 4, -156, 0, 3, 4];
-console.log(getPositives(arr));
+//const arr = [1, 10, -3, 4, -156, 0, 3, 4];
+//console.log(getPositives(arr));
 
 console.log(
   "// 4. Feladat - Perdülj, fordulj! ----------------------------------"
@@ -114,8 +114,8 @@ function rotate(direction, arr) {
     return console.log(`Hibás érték`) + console.log(arr);
   }
 }
-const arr2 = [1, 2, 3];
-rotate("left", arr2);
+//const arr2 = [1, 2, 3];
+//rotate("left", arr2);
 
 console.log(
   "// 5. Feladat - Nagy (Betűs) Szavak -----------------------------------"
@@ -134,12 +134,14 @@ function isSeparator(c) {
 function capitalizeWords(text) {
   let textArr = [];
   let textArr2 = [];
+  let textArr3 = [];
   textArr = text.split(" ");
   for (let i = 0; i < textArr.length; i++) {
     textArr2.push(textArr[i][0].toUpperCase());
-    //console.log(textArr[i].splice(1,1,"x"))
+    textArr3.push([textArr[i].substring(1,1)+textArr2[i]+textArr[i].substring(1)]);
   }
-  return console.log(textArr2);
+  return console.log(textArr3.join(" "));
+  
 }
 let text = "Ha a győzelem gátja a gát, akkor fel kell robbantani.";
 capitalizeWords(text);
