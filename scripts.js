@@ -11,7 +11,7 @@
   - győződj meg róla, hogy minden kód, amit le akartál írni le van írva, és amit nem akartál leírni az nincs :)
   - a megoldásokat alapvetően a kijelölt helyekre várjuk, de segédfüggvényeket és függvényen kívüli változókat bármikor létrehozhatsz
 */
-
+console.log("// 1. Feladat - faktoriális -----------------------------------");
 // 1. Feladat - faktoriális
 
 // Írj egy függvényt, ami visszaadja egy beadott, nemnegatív szám faktoriálisát!
@@ -41,6 +41,7 @@ function factorial(num) {
 let num = 5;
 //console.log(`A(z) ${num} faktoriálisa: ${factorial(num)}`);
 
+console.log("// 2. Feladat - FizzBuzz -----------------------------------");
 // 2. Feladat - FizzBuzz
 
 // Írj egy függvényt, ami a kövektezőképpen működik:
@@ -70,6 +71,7 @@ function fizzbuzz(n) {
 
 //fizzbuzz(20);
 
+console.log("// 3. Feladat - Unicum, csak pozitívan! -----------------------------------");
 // 3. Feladat - Unicum, csak pozitívan!
 
 // Írj egy függvényt, ami egy egész számokat tartalmazó tömbből visszadja egy tömb formájában azokat a számokat, amelyek pozitívak!
@@ -132,13 +134,13 @@ function isSeparator(c) {
 }
 
 function capitalizeWords(text) {
-  let textArr = [];
-  let textArr2 = [];
-  let textArr3 = [];
-  textArr = text.split(" ");
+  let textArr = text.split(" ");
+  let textArr2 = [];  //kezdő betűk naggyá alakítva
+  let textArr3 = []; // szavak nagy kezdőbetűkkel
   for (let i = 0; i < textArr.length; i++) {
     textArr2.push(textArr[i][0].toUpperCase());
-    textArr3.push([textArr[i].substring(1,1)+textArr2[i]+textArr[i].substring(1)]);
+    const actArr = textArr[i];
+    textArr3.push([actArr.substring(1,1)+textArr2[i]+actArr.substring(1)]);
   }
   return console.log(textArr3.join(" "));
   
@@ -146,7 +148,7 @@ function capitalizeWords(text) {
 let text = "Ha a győzelem gátja a gát, akkor fel kell robbantani.";
 capitalizeWords(text);
 
-("6. Feladat - Felhasználók -----------------------------------");
+console.log("// 6. Feladat - Felhasználók -----------------------------------");
 // 6. Feladat - Felhasználók
 
 // 1. Készíts egy felhasználókat tartalmazó adatbázist!
